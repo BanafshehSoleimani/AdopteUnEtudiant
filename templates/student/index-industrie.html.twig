@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Domaine Industrie| Adopte un etudiant{% endblock %}
+
+{% block body %}
+  
+     <!-- students sections-->
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>Industrie</h2>
+                </a>
+                  {% for student in students %}
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstname}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <span class="card-text">{{ student.lastname }}
+                        <br>
+                        <span>Durée :</span>
+                        <br>
+                        <span class="card-text">De: {{ student.startAt | date ('y/m/d') }}
+                        <span class="card-text">À :{{ student.endAt | date ('y/m/d') }}
+                        <br>
+                        <a href="{{ path('student', {'firstname' : student.firstname}) }}"><h5>Voir profil</h5></a>
+                    </div>
+                </div>
+                  {% endfor %}
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- End of student sections -->
+
+{% endblock %}

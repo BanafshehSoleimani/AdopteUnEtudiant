@@ -1,0 +1,30 @@
+{% extends '/account-company/index.html.twig' %}
+
+{% block title %}Mon compte | Ma boutique Symfony
+{% endblock %}
+
+{% block body_adoption %}
+	
+	   <!-- students sections-->
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>Etudiants Adoptés</h2>
+                </a>
+                  {% for student in app.user.adoptions  %}
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstnameStudent}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photoStudent) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <p class="card-text">{{ student.firstnameStudent}}
+                        
+                        </p>
+                    </div>
+                </div>
+                  {% endfor %}
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}

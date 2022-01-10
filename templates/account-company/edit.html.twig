@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{# {% block body_id 'user_edit' %} #}
+
+{% block body %}
+
+
+{# {% for photo in app.photos %}
+    <img class="card-img-top" src="{{ asset('uploads/photo/' ~ photo.name) }}" alt="Card image cap">
+{% endfor %} #}
+
+    {{ form_start(form) }}
+        {{ form_widget(form) }}
+
+     
+    {{ form_end(form) }}
+
+    {{ parent() }}
+
+    {{ show_source_code(_self) }} #}
+    {% endblock %}
+

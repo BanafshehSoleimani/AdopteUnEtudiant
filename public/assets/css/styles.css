@@ -1,0 +1,349 @@
+/* google font Montserrat */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+body {
+    line-height: 1.5;
+    font-family: 'Montserrat', sans-serif;
+    color: #262D2A;
+    background-color: #F2F8F1;
+}
+
+a:link {
+    color: #262D2A;
+    text-decoration: none;
+}
+
+.nav-item-login {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* img-header  */
+
+#img-header-container {
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 0px 60px rgba(0, 0, 0, .8);
+}
+
+#img-header {
+    width: 100%;
+}
+
+.slogan-text {
+    color: #262D2A;
+    text-shadow: #1887DC 1px 0 10px;
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 50%;
+    height: 400px;
+    z-index: 2;
+    font-size: 40px;
+}
+
+/* end of img-header */
+
+
+/* adopteunetudiant logo */
+
+#adopte-logo {
+    border-radius: 0.5em;
+    box-shadow: #F2F8F1 0px 0px 5px 0px;
+    background-color: #F2F8F1;
+    width: 150px;
+}
+
+
+/* end of adopteunetudiant logo */
+
+
+/* students section */
+
+#profiletudiants,
+#profiletudiants2 {
+    padding-top: 5em;
+}
+
+.content {
+    margin: 2em 0 5em 0;
+}
+
+.card {
+    margin: 2em 0 0 2em;
+    border-color: #E35226;
+    border-radius: 0.75em;
+    box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, .7);
+    /* box-shadow: rgba(95, 95, 95, 0.459) 0px 0px 20px 0px; */
+}
+
+section h2:hover {
+    color: #E35226;
+    transition: 1s;
+    transition: ease-out 0.4s;
+}
+
+
+/* end of students section */
+
+
+/* login button */
+
+.glow-on-hover,
+.glow-on-hover2 {
+    background: linear-gradient(45deg, #E35226, #F2F8F1, #1887DC, #262D2A);
+    width: 10em;
+    height: 3em;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #262D2A;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 5em;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #E35226, #F2F8F1, #1887DC, #262D2A);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 5em;
+}
+
+.glow-on-hover:active {
+    color: #29262d;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #262D2A;
+    left: 0;
+    top: 0;
+    border-radius: 5em;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 600% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+
+/* end of login button */
+
+
+/* footer */
+
+.footer {
+    background-color: #262D2A;
+    padding: 70px 0;
+    width: 100%;
+}
+
+#footersize {
+    max-width: 1190px;
+    margin: auto;
+}
+
+.rowfooter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-col {
+    width: 25%;
+    padding: 0 15px;
+}
+
+.footer-col h4 {
+    font-size: 18px;
+    color: #F2F8F1;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    background-color: #E35226;
+    height: 2px;
+    box-shadow: border-box;
+    width: 50px;
+}
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+}
+
+.footer-col ul li a {
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 400;
+    color: #F2F8F1;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #F2F8F1;
+    padding-left: 8px;
+}
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #F2F8F1;
+    transition: all 0.5s ease;
+}
+
+.footer-col .social-links a:hover {
+    color: #262D2A;
+    background-color: #E35226;
+}
+
+
+/* responsive */
+
+@media screen and (min-width: 992px) {
+    /* login button */
+    .glow-on-hover2 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    /* login button */
+    .glow-on-hover {
+        display: none;
+    }
+    .login-container {
+        margin: 1em;
+    }
+    .login-responsive {
+        /**container de base**/
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    /* students profiles */
+    .rowcards {
+        justify-content: center;
+    }
+    /* navbar toggler */
+    .navbar {
+        height: auto;
+    }
+
+    .slogan-text {
+        font-size: 40px;
+        top: 35%;
+    }
+}
+
+@media screen and (max-width: 790px) {
+    /* footer */
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    /* login button */
+    .glow-on-hover {
+        display: none;
+    }
+    .login-container {
+        margin: 1em;
+    }
+    /* students profiles */
+    .rowcards {
+        justify-content: center;
+    }
+    /* navbar toggler */
+    .navbar {
+        height: auto;
+    }
+
+    .slogan-text {
+        font-size: 30px;
+     
+    }
+}
+
+@media screen and (max-width: 574px) {
+    /* footer */
+    .footer-col {
+        width: 50%;
+        margin-bottom: 30px;
+    }
+    /* login button */
+    .glow-on-hover {
+        display: none;
+    }
+    .login-container {
+        margin: 1em;
+    }
+    .glow-on-hover2 {}
+    /* students profiles */
+    .rowcards {
+        justify-content: center;
+    }
+    /* navbar toggler */
+    .navbar {
+        height: auto;
+    }
+    .slogan-text {
+        font-size: 20px;
+        
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .slogan-text {
+        font-size: 15px;
+        top: 32%;
+    }
+}
+
+
+
+/* end of footer responsive */

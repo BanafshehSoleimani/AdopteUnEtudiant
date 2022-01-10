@@ -1,0 +1,129 @@
+            .form-inscription .container{
+                width: auto!important;               
+            }
+             
+            .form-inscription {
+                margin: 10rem 0 5rem 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+                       
+            .form-group {
+                margin: 2rem 0 2rem 0;
+            }
+            /* form header */
+            
+            .headersubscribe h2,
+            h3 {
+                display: flex;
+                justify-content: center;
+            }
+            /* box form css */
+            
+            .form-control-lg {
+                border-radius: 1rem;
+                width: 45rem;
+                
+            }
+            
+            /* .form-control::placeholder {} */
+            
+            .submit-subscribe-button-div {
+                margin-top: 10%;
+                display: flex;
+                justify-content: center;
+            }
+            /* radio buttons */
+            
+            .form-check-input:checked {
+                border-color: #E35226;
+                background-color: #E35226;
+                
+            }
+            .form-check .form-check-input{
+                float: inherit;
+            }
+
+            .submit-subscribe-button {
+                color: #F2F8F1;
+                background-color: #E35226;
+                width: 25%;
+            }
+            
+            .cv-lm-svg {
+                margin-top: 3%;
+                width: 100px;
+            }
+            
+            .date-form {
+                width: 25%;
+                margin-left: 2rem;
+            }
+            
+            .date-form-container {
+                margin-bottom: 2rem;
+                display: flex;
+                flex-direction: row;
+            }
+            
+            #date-delai {
+                margin-left: 5%;
+            }
+            /* responsive */
+            
+            @media screen and (max-width: 790px) {
+                .form-control-lg {
+                    width: 30rem;
+                }
+                .date-form-container {
+                    display: block;
+                    flex-direction: column;
+                }
+                .submit-subscribe-button {
+                    width: 30%;
+                }
+
+                form{
+                    width: 100%;
+                }
+
+                .footer-col{
+                    width: 100%;
+                    
+                }
+
+               
+            }
+            
+            @media screen and (max-width: 574px) {
+                .form-inscription {
+                    margin: 0;
+                }
+                .form-control-lg {
+                    width: 100%;
+                }
+                .submit-subscribe-button {
+                    width: 50%;
+                    
+                }
+                form{
+                    width: 100%;
+                    
+                }
+
+                .footer-col{
+                    width: 100%;
+                 
+                }
+
+                .social-links{
+                    justify-content: center;
+                }
+
+                /* .form-register form {
+                  
+                } */
+            }
+            /* end of footer responsive */

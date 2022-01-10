@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+    {% block styleregister %}
+    <link href="{{ asset('assets/css/sign_up.css') }}" rel="stylesheet">
+{% endblock %}
+
+{% block body %}
+	<div class="mapage">
+		<div class="container">
+			<form class="background" method="post">
+				{% if error %}
+					<div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+				{% endif %}
+
+				{% if app.user %}
+					<div class="mb-3">
+						Vous êtes connecté en tant que
+						{{ app.user.username }},
+						<a href="{{ path('app_logout_student') }}">Logout</a>
+					</div>
+				{% endif %}
+
+				<img src="{{ asset('assets/logos/logodef.svg') }}" alt="adopte-logo" class="adopte-logo-login">
+				<p>Bienvenue</p>
+				<input type="email" value="{{ last_username }}" name="email" placeholder="Email" autocomplete="email" required autofocus><br>
+				<input type="password" name="password" placeholder="Mot de passe" autocomplete="current-password" required><br>
+
+				<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+				<input type="submit" name="submit" value="Connexion"><br>
+				<h3><a href="{{ path('register_student') }}">S'inscrire</a></h3>
+			</form>
+            </div>
+    </div>
+
+		{% endblock %}

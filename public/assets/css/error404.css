@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .error404 {
+        font-family: 'Montserrat', sans-serif;
+        height: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        background: #1887DC;
+    }
+    
+    .container-error404 {
+        text-align: center;
+        user-select: none;
+    }
+    
+    .container-error404 h1 {
+        font-size: 6rem;
+    }
+    
+    .container-error404 h1 .fas {
+        animation: animate1 2s linear infinite alternate;
+    }
+    
+    .container-error404 h1 .num {
+        animation: animate2 2s linear infinite alternate;
+    }
+    
+    .container-error404 p {
+        margin-top: 20px;
+        word-spacing: 5px;
+    }
+    
+    .adopte-logo {
+        animation: animate3 2s linear infinite alternate;
+        position: absolute;
+        top: 0;
+    }
+    
+    img {
+        width: 300px;
+    }
+    /* animation */
+    
+    @keyframes animate1 {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+            transform: rotate(360deg);
+        }
+    }
+    
+    @keyframes animate2 {
+        0% {
+            opacity: 0
+        }
+        50% {
+            opacity: 0.5
+        }
+        100% {
+            opacity: 1
+        }
+    }
+    
+    @keyframes animate3 {
+        0% {
+            opacity: 0.1
+        }
+        100% {
+            opacity: 1;
+            top: 20%
+        }
+    }
+    /* button part  */
+    
+    .down-part {
+        margin-top: 10rem;
+        text-align: center;
+    }
+    
+    .down-part button a {
+        color: #F2F8F1;
+    }
+    
+    button {
+        position: relative;
+        height: 60px;
+        width: 200px;
+        margin: 0 35px;
+        border-radius: 50px;
+        border: none;
+        background: #262D2A;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: background 0.5s;
+    }
+    
+    button:first-child:hover {
+        background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+        background-size: 400%;
+    }
+    
+    button:first-child:before {
+        content: '';
+        position: absolute;
+        background: inherit;
+        top: -5px;
+        right: -5px;
+        bottom: -5px;
+        left: -5px;
+        border-radius: 50px;
+        filter: blur(20px);
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+    
+    button:first-child:hover:before {
+        opacity: 1;
+        z-index: -1;
+    }
+    
+    button:hover {
+        z-index: 1;
+        animation: glow 8s linear infinite;
+    }
+    
+    @keyframes glow {
+        0% {
+            background-position: 0%;
+        }
+        100% {
+            background-position: 400%;
+        }
+    }

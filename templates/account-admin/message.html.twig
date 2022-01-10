@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte | Ma boutique Symfony{% endblock %}
+
+{% block body %}
+    <a href="{{ path('account_password') }}">Modifier mon mot de passe</a>
+  <main>
+     <!-- sidebar navigation -->
+        <div class="sidebar">
+            <ul>
+                <div class="student-avatar-container">
+                    <li class="student-avatar-dashboard">
+                        <img src="assets/img/avatar3.png" alt="avatar-student">
+                    </li>
+                </div>
+                <div class="center-icons-dashboard">
+                    <li class="home-icon">
+                        <a href="dashboard_student_home.html"><i class="far fa-bell"></i></a>
+                    </li>
+                    <li class="message-icon">
+                        <a href="dashboard_student_message.html"><i class="far fa-bell"></i></a>
+                    </li>
+                    <li class="bell-icon">
+                        <a href="#"><i class="far fa-bell"></i></a></li>
+                    <li>
+                        <a href="index.html"><img src="assets/svg/icon nav dashboard/deconnexion.svg" alt="deconnexion" id="logout-icon"></a>
+                    </li>
+                </div>
+            </ul>
+        </div>
+        <!-- end of sidebar navigation  -->
+
+        <div class="received-messages">
+
+        </div>
+        <div class="chat-area">
+
+        </div>
+    </main>
+
+
+
+
+{% endblock %}

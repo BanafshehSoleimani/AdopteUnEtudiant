@@ -1,0 +1,71 @@
+.home-icon {
+    background-color: #F2F8F1;
+}
+
+main {
+    display: flex;
+}
+
+.dashboard-partition {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 3rem;
+}
+
+.dashboard-partition h4 {
+    color: #E35226;
+}
+
+.dashboard-partition h6 a {
+    color: #1887DC;
+}
+
+.dash-partition-header {
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    margin: 2rem 2rem 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dash-partition-header div {
+    padding: 2rem 0 2rem 2rem;
+    background-color: white;
+    height: 100%;
+    width: 33%;
+    border-radius: 20px;
+    box-shadow: 20px 20px 40px -2px rgba(0, 0, 0, .5);
+}
+
+.dash-partition-cv-lm {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    margin: 2rem 2rem 2rem 2rem;
+    justify-content: space-between;
+}
+
+.partition-cv,
+.partition-lm {
+    padding: 2rem 0 2rem 2rem;
+    width: 40%;
+    height: 100%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 20px 20px 40px -2px rgba(0, 0, 0, .5);
+}
+
+.dash-partition-description {
+    padding: 2rem 0 2rem 2rem;
+    background-color: white;
+    width: 100%;
+    height: 250px;
+    border-radius: 20px;
+    margin: 2rem 2rem 2rem 2rem;
+    justify-content: space-between;
+    box-shadow: 20px 20px 40px -2px rgba(0, 0, 0, .5);
+}

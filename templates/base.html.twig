@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fontawesome css -->
+	<link href="{{ asset('assets/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/fontawesome/css/all.min.css') }}" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- carousel CSS -->
+	<link href="{{ asset('assets/css/carousel.css') }}" rel="stylesheet">
+
+  <!-- our css -->
+  
+    {% block styleregister %}
+    {% endblock %}
+    
+
+  	<link href="{{ asset('assets/css/navbar.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/css/profils-button.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/css/dashboard_student.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/css/dashboard_student_home.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/logos/hand-logo.svg') }}" sizes="16x16" rel="icon">
+    
+    
+    <title>Adopteunetudiant</title>
+</head>
+
+<body>
+    <header class="sticky-top">
+        <!-- our navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container">
+                <h1>
+                    <a href="{{ path('home') }}"><img src="{{ asset('assets/logos/logopsd2.png') }}" alt="Adopte-logo" id="adopte-logo" ></a>
+                </h1>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-end">
+
+                        <li class="nav-item navbarhover">
+                            <a class="link link--thebe" href="{{ path('home') }}">Accueil</a>
+                        </li>
+
+                        <li class="nav-item navbarhover">
+                            <a class="link link--thebe" href="{{ path('students') }}">étudiant</a>
+                        </li>
+                        <li class="nav-item navbarhover">
+                            <a class="link link--thebe" href="#">Entreprise</a>
+                        </li>
+                        <li class="nav-item navbarhover">
+                            <div class="right-menu">
+                                <a class="link link--thebe " href="#">Domaine d'études</a>
+                                <div class="dropdown-menu-domaine">
+                                    <a href="{{ path('students-informatique') }}">Informatique</a>
+                                    <a href="{{ path('students-commerce') }}">Commerce</a>
+                                    <a href="{{ path('students-information') }}">Information</a>
+                                    <a href="{{ path('students-sante') }}">Santé</a>
+                                    <a href="{{ path('students-Industrie') }}">Industrie</a>
+                                    <a href="{{ path('students-BanqueEtAssurances') }}">Banque et Assurances</a> 
+                                </div>
+                            </div>
+
+
+                        </li>
+                        <li class="nav-item nav-item-login  glow-on-hover">
+                            <div class="right-menu-login">
+                                {% if (app.user) %}
+                                <a class="nav-link nav-login" href="{{ path('app_logout') }}">Déconnexion</a>
+                                 {% else %}
+                                 <a class="nav-link nav-login" href="{{ path('app_login') }}">Connexion</a>
+                                {% endif %}
+                            </div>
+                        </li>
+                        {# <li class="nav-item navbarhover">
+                            <a class="link link--thebe" href="#">Domaine d'études</a>
+                        </li>
+                        <li class="nav-item nav-item-login  glow-on-hover">
+                            <a class="nav-link nav-login" href="{{ path('app_login_student') }}">Connexion</a>
+                        </li> #}
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- End of our navbar -->
+
+    </header>
+    <div class="container login-responsive">
+        <div class="login-container">
+            <a class="nav-link nav-login glow-on-hover2" href="sign_up.html">Connexion</a>
+        </div>
+    </div>
+
+
+
+{% block body %}
+
+
+{% endblock %}
+
+    <!-- Footer begin -->
+    <footer class="footer">
+        <div class="container" id="footersize">
+            <div class="rowfooter">
+                <div class="footer-col">
+                    <h4>Domaine d'études</h4>
+                    <ul>
+                        <li>
+                             <a href="{{ path('students-informatique') }}">Informatique</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('students-commerce') }}">Commerce</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('students-information') }}">Information</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('students-sante') }}">Santé</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('students-sante') }}">Industrie</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('students-sante') }}">Banque et Assurances</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contactez-nous</h4>
+                    <ul>
+                        <li>
+                            <a href="{{ ('mailto: adopteunetudiant@gmail.com') }}">Email</a>
+                        </li>
+                        <li>
+                            <a href="{{ ('tel:+33500000000') }}">01 23 45 67 89</a>
+                        </li>
+                       
+                    </ul>
+                </div>
+                {# <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>
+                            <a href="#">Lorem, ipsum dolor.</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem, ipsum dolor.</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem, ipsum.</a>
+                        </li>
+                        <li>
+                            <a href="#">Lorem, ipsum.</a>
+                        </li>
+                    </ul>
+                </div> #}
+                <div class="footer-col">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="error404.html"><i class="fab fa-facebook-f"></i></a>
+                        <a href="error404.html"><i class="fab fa-twitter"></i></a>
+                        <a href="error404.html"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="error404.html"><i class="fab fa-youtube"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+    <!-- Carousel JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous">
+    </script>
+    <script src="{{ asset('assets/js/carousel.js') }}"></script>
+    <script src="{{ asset('assets/js/sign_up.js') }}"></script>
+		
+
+
+</body>
+
+</html>
+

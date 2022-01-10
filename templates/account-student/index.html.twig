@@ -1,0 +1,87 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mon compte | Ma boutique Symfony{% endblock %}
+
+{% block body %}
+  
+  <main>
+        <!-- sidebar navigation -->
+        <div class="sidebar">
+            <ul>
+                <div class="student-avatar-container">
+                    <li class="student-avatar-dashboard">
+                      
+                
+                        <img src=" {{ asset('uploads/photo/' ~ app.user.photo) }}" alt="avatar-student">
+     
+                       
+                    </li>
+                </div>
+                <div class="center-icons-dashboard">
+                    <li class="home-icon">
+                        <a href="dashboard_student_home.html"><i class="far fa-bell"></i></a>
+                    </li>
+                    <li class="message-icon">
+                        <a href="dashboard_student_message.html"><i class="far fa-bell"></i></a>
+                    </li>
+                    <li class="bell-icon">
+                        <a href="#"><i class="far fa-bell"></i></a></li>
+                       
+                    <li>
+                        <a href="{{ path('app_logout') }}"><img src=" {{ asset('assets/svg/iconnavdashboard/deconnexion.svg') }}" alt="deconnexion" id="logout-icon"></a>
+                    </li>
+                   
+                </div>
+            </ul>
+        </div>
+        <!-- end of sidebar navigation  -->
+        <!-- dashboard body -->
+        <div class="dashboard-partition">
+            <div class="dash-partition-header">
+                <div class="partition-header-profil">
+                    <h4>Hello {{ app.user.firstname}} </h4>
+                    <h5>Profil renseigné à 80%</h5>
+                    <h6><a href="{{ path('student_edit_profil') }}">Consulter mon profil</a></h6>
+                    <h6>  <a href="{{ path('student_edit_password') }}">Modifier mon mot de passe</a></a></h6>
+                </div>
+                <div class="partition-header-date">
+          
+                    <h4>Type de recherche : {{ app.user.searchtype }} </h4>
+                    <h5>Du  {{ app.user.startAt | date ('d-m-Y') }}  au  {{ app.user.endAt | date ('d-m-Y') }}</h5>
+                    <h6><a href="{{ path('student_edit_date') }}">Modifier</a></h6>
+     
+                </div>
+                <div class="partition-header-status">
+                    <h4>Date de stage recherché</h4>
+                    <h5>Du 13 Janvier au 30 Avril</h5>
+                    <h6><a href="#">Modifier</a></h6>
+                </div>
+            </div>
+            <div class="dash-partition-cv-lm">
+                <div class="partition-cv">
+                    <h4>Mon CV</h4>
+                    <h5>Mise à jour le 02/12/2021</h5> 
+                    <h6><a href="{{ asset('uploads/cv/' ~ app.user.cv) }}">Voir</a></h6>
+                
+                <h6><a href="{{ path('student_edit_cv') }}">Modifier</a></h6>
+                </div>
+                <div class="partition-lm">
+                    <h4>Ma Motivation</h4>
+                    <h5>Mise à jour le 02/12/2021</h5>         
+                    <h6><a href="{{ asset('uploads/motivation/' ~ app.user.motivation) }}">Voir</a></h6>
+                    <h6><a href="{{ path('student_edit_motivation') }}">Modifier</a></h6>
+                </div>
+            </div>
+            <div class="dash-partition-description">
+                <h4>Mon CV</h4>
+                <h5>Mise à jour le 02/12/2021</h5>
+                <h6><a href="#">Modifier</a></h6>
+            </div>
+        </div>
+        <!-- end of dashboard body  -->
+    </main>
+
+
+
+
+{% endblock %}

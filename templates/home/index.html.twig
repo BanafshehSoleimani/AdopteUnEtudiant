@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Adopte un étudiant{% endblock %}
+
+{% block body %}
+    <!-- img-header -->
+    <div class="container-fluid" id="img-header-container"> <img src="{{ asset('assets/img/6.jpg') }}" class="img-fluid" id="img-header" alt="header-picture">
+    <div class="slogan-text">
+            <p>Vous êtes in <b>THE RIGHT PLACE</b> pour trouvez des profils appropriés à votre entreprise</p>
+            
+        </div>
+    </div>
+    <!-- End of img-header -->
+
+{# Slider #}
+<div class="pic-ctn">
+{% for student in students %}  
+    <img  src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="" class="pic">
+{% endfor %}
+ 
+    
+</div>
+
+
+
+    <div class="heading text-center">
+        <a href="{{ path('students') }}" class="a-btn">
+            <span class="a-btn-text">Voir les profils</span>
+            <span class="a-btn-slide-text">Now!</span>
+            <span class="a-btn-icon-right"><span></span></span>
+        </a>
+    </div>
+
+
+{% endblock %}

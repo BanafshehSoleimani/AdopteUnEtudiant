@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello AdoptionController!{% endblock %}
+
+{% block body %}
+  {% for student in adoption %}
+            <tr>
+                <th>
+                    {{ student.student.firstname }}
+                </th>
+                <td>
+                    {{ student.student.lastname }}<br>
+                </td>
+                <td>
+                </td>
+         
+               {#  <td>
+                     <a href="{{ path('delete_to_cart', {'id' : student.student.id}) }}"><img src="{{ asset('assets/img/bin.png') }}" alt="Supprimer mon produit" height="18px"></a>
+                </td> #}
+            </tr>
+            {% endfor %}
+{% endblock %}

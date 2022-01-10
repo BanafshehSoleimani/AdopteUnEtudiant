@@ -1,0 +1,42 @@
+
+{% block title %}Page non trouvée | Adopte un etudiant
+{% endblock %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ asset('assets/logos/hand-logo.svg') }}" sizes="16x16" rel="icon">
+    <title>Adopteunetudiant</title>
+    <link href="{{ asset('assets/css/error404.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/css/styles.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/fontawesome/css/font-awesome.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('assets/fontawesome/css/all.min.css') }}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="error404">
+        <div class="col">
+            <div class="adopte-logo"><img src="{{ asset('assets/logos/logodef.svg') }}" alt=""></div>
+            <div class="container-error404">
+                <h1>
+                    <span class="num">4 </span>
+                    <i class="fas fa-cog"></i>
+                    <span class="num"> 4</span>
+                </h1>
+                <p>Oups , Lien en cours de construction</p>
+            </div>
+            <div class="down-part">
+                <button><a href="index.html">Accueil</a></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profil étudiant| Adopte un etudiant{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-9">
+            <h3>Profil de : {{ student.firstname }} </h3>
+                <div class="card" style="width: 18rem;">
+   <img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap">
+                </div>
+            <div class="row product-container">
+         
+                <div class="col-md-4">
+                    <div class="product-item text-center">
+     
+                       <span class="product-subtitle">{{ student.description }}</span>
+                 
+                    </div>
+                    <div class="product-item text-center">
+             
+                       <span class="product-subtitle">{{ student.age }}</span>
+                 
+                    </div>
+                    <div class="product-item text-center">
+                       <span class="product-subtitle">{{ student.lastname }}</span>
+   
+                 
+                    </div>
+                        <a class="nav-link nav-login" href="{{ path('add_to_adoption', {'id' :student.id}) }}">Adopter</a>
+                </div>
+
+        </div>
+    </div>
+{% endblock %}

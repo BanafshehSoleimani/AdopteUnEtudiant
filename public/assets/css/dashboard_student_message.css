@@ -1,0 +1,25 @@
+.message-icon {
+    background-color: #F2F8F1;
+}
+
+main {
+    display: flex;
+}
+
+.received-messages {
+    width: 50%;
+    height: 900px;
+    margin: 2rem 2rem 2rem 2rem;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 20px 20px 40px -2px rgba(0, 0, 0, .5);
+}
+
+.chat-area {
+    width: 50%;
+    height: 900px;
+    margin: 2rem 2rem 2rem 0.5rem;
+    border-radius: 20px;
+    background-color: #262D2A;
+    box-shadow: 20px 20px 40px -2px rgba(0, 0, 0, .5);
+}

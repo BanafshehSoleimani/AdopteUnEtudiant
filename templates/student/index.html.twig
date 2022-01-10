@@ -1,0 +1,236 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nos étudiants | Adopte un etudiant{% endblock %}
+
+{% block body %}
+   <div class="col-md-3">
+            <h3>Filtrer</h3>
+            {{ form(form) }}
+        </div>
+ 
+    <!-- students sections-->
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>TOUS NOS ETUDIANTS</h2>
+                </a>
+                  {% for student in students %}
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstname}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <p class="card-text">{{ student.startAt | date ('y/m/d') }}
+                        
+                        </p>
+                    </div>
+                </div>
+                  {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>INFORMATIQUE</h2>
+                </a>
+  
+                      {% for student in studentsInformatique %}
+                          
+                     
+                
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstname}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <p class="card-text">{{ student.startAt | date ('y/m/d') }}
+                        
+                        </p>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>INFORMATION</h2>
+                </a>
+  
+                      {% for student in studentsInformation %}
+                          
+                     
+                
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstname}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <p class="card-text">{{ student.startAt | date ('y/m/d') }}
+                        
+                        </p>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+
+    </section>
+
+
+
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>COMMERCE</h2>
+                </a>
+  
+                      {% for student in studentsCommerce %}
+                          
+                     
+                
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstname}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <p class="card-text">{{ student.startAt | date ('y/m/d') }}
+                        
+                        </p>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+
+    </section>
+    
+
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>INDUSTRIE</h2>
+                </a>
+  
+                      {% for student in studentsIndustrie %}
+                          
+                     
+                
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstname}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <p class="card-text">{{ student.startAt | date ('y/m/d') }}
+                        
+                        </p>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+
+    </section>
+    
+
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>SANTE</h2>
+                </a>
+  
+                      {% for student in studentsSante %}
+                          
+                     
+                
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstname}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <p class="card-text">{{ student.startAt | date ('y/m/d') }}
+                        
+                        </p>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+
+    </section>
+    
+
+    <section class="content" id="profiletudiants">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="#">
+                    <h2>BANQUE ET ASSURANCE</h2>
+                </a>
+  
+                      {% for student in studentsBanqueEtAssurances %}
+                          
+                     
+                
+                <div class="card" style="width: 18rem;">
+                   <a href="{{ path('student', {'firstname' : student.firstname}) }}"><img class="card-img-top" src="{{ asset('uploads/photo/' ~ student.photo) }}" alt="Card image cap"></a> 
+                    <div class="card-body">
+                        <p class="card-text">{{ student.startAt | date ('y/m/d') }}
+                        
+                        </p>
+                    </div>
+                </div>
+              {% endfor %}
+            </div>
+        </div>
+
+    </section>
+    
+   
+
+    {# <section class="content" id="profiletudiants2">
+        <div class="container">
+            <div class="row rowcards">
+                <a href="">
+                    <h2>Business students</h2>
+                </a>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/avatar1.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/avatar2.webp" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/avatar3.png" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="assets/img/avatar4.webp" alt="Card image cap">
+                    <div class="card-body">
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> #}
+
+    <!-- End of student sections -->
+
+
+
+
+
+{% endblock %}

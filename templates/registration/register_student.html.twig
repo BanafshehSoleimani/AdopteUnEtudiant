@@ -1,0 +1,107 @@
+{# {% extends 'base_formulaire_inscription_etudiant.html.twig' %} #}
+{% extends 'base.html.twig' %}
+
+{% block head %}
+    
+
+    <title>Adopteunetudiant</title>
+{% endblock %}
+
+{% block styleregister %}
+<link href="{{ asset('assets/css/formulaire.css') }}" rel="stylesheet">
+{% endblock %}
+{# {% block title %}Register{% endblock %} #}
+
+{% block body %}
+  
+
+	<div class="form-inscription">
+	<h2>Inscription</h2>
+	<h3><img src="{{ asset('assets/svg/icon-img-etudiant.svg') }}" alt="upload-img-student"></h3>
+	</div>
+
+<div class="form-inscription">
+<div class="container">
+        
+	<!-- form begin  -->
+	{{ form_start(registrationForm) }}
+
+    <div class="form-group form-group-css">
+            {{ form_row(registrationForm.photo) }}
+    </div>
+
+
+            {{ form_row(registrationForm.firstname) }}
+
+
+
+            {{ form_row(registrationForm.lastname) }}
+
+
+
+            {{ form_row(registrationForm.age) }}
+
+
+
+            {{ form_row(registrationForm.city) }}
+
+
+
+    {# <div class="form-group">
+            {{ form_row(registrationForm.end_at) }}
+    </div> #}
+
+    <div class="form-group form-check">
+            {{ form_row(registrationForm.searchType) }}
+    </div>
+
+        {{ form_row(registrationForm.start_at) }}
+        {{ form_row(registrationForm.end_at) }}
+
+        
+    {# <div class="form-group">
+        <label class="form-label">Durée</label>
+                <div class="date-form-container">
+                    <span>De : </span>
+                    <input type="date" class="form-control form-control-lg date-form">
+                    <span id="date-delai">à : </span>
+                    <input type="date" class="form-control form-control-lg date-form">
+                  </div>
+    </div> #}
+
+   
+            {{ form_row(registrationForm.domain) }}
+   
+
+   
+            {{ form_row(registrationForm.description) }}
+  
+    
+    <div class="row">
+            <img src="{{ asset('assets/svg/icon-cv.svg') }}" alt="cv-logo" class="cv-lm-svg">
+            {{ form_row(registrationForm.cv) }}
+           
+    </div>
+
+    <div class="row">
+            <img src="{{ asset('assets/svg/icon-lm.svg') }}" alt="lm-logo" class="cv-lm-svg">
+            {{ form_row(registrationForm.motivation) }}
+    
+    </div>
+
+   
+            {{ form_row(registrationForm.email) }}
+    
+
+     
+            {{ form_row(registrationForm.plainPassword) }}
+    
+
+    <div class="form-group submit-subscribe-button-div">
+            <button type="submit" class="form-control form-control-lg submit-subscribe-button">Envoi</button>
+    </div>
+
+</div>
+</div>   
+    {{ form_end(registrationForm) }}
+{% endblock %}
